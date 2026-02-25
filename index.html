@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carlos Sucre – Fullstack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="active" data-page="home">Home</a>
+    <a data-page="projects">Projects</a>
+    <a data-page="posts">Posts</a>
+    <a data-page="videos">Videos</a>
+    <div class="nav-spacer"></div>
+    <a id="contact-btn" class="contact-btn" onclick="copyEmail()">Contact</a>
+  </div>
+  <div id="email-toast" class="email-toast">✓ Email copied to clipboard</div>
+</nav>
+
+<div class="container">
+
+  <!-- ===================== HOME ===================== -->
+  <div class="page active" id="home">
+
+    <header class="header">
+      <h1>Carlos Sucre ☕</h1>
+      <p class="role">Fullstack Developer — <span>Brazil</span></p>
+    </header>
+
+    <p class="bio">
+      Hey there! I am a fullstack developer based in Brazil, passionate about building real
+      projects that solve problems and improve people's lives. I have experience working with
+      startups and scaleups, creating web applications, automations, and tools that people
+      actually use.
+      <br><br>
+      I love learning new technologies, sharing knowledge, and contributing to open-source
+      projects. I build things from scratch, share code publicly, and continuously sharpen my
+      problem-solving skills. My goal is to create software that matters.
+      <br><br>
+      I also share my knowledge on <a href="https://youtube.com" target="_blank">YouTube</a>,
+      creating videos about programming, fullstack development, and building real projects —
+      helping other developers learn faster and grow their skills.
+    </p>
+
+    <div class="social">
+      <a href="https://github.com/carlossucre" target="_blank">GitHub</a>
+      <a href="https://twitter.com/carlossucre" target="_blank">Twitter / X</a>
+      <a href="https://youtube.com/@carlossucre" target="_blank">YouTube</a>
+      <a href="https://tiktok.com/@carlossucre" target="_blank">TikTok</a>
+    </div>
+
+    <section class="section">
+      <p class="section-title">What people say</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            Brilliant developer with the rare ability to dive deep into the code while also
+            inspiring teams toward a common goal. His track record and open-source work speak
+            for themselves. Any company he joins is fortunate to have someone of his caliber.
+          </p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Fahim Kadhi</span>
+            <span class="testimonial-role">Head of MENA @ Momos</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            Add a second testimonial here. This is a placeholder for another person who gave
+            you great feedback about your work, projects, or impact as a developer.
+          </p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">Your Next Testimonial</span>
+            <span class="testimonial-role">Role @ Company</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="contact-line">
+      Have something to say? I'd love to hear from you —
+      <span class="contact-email" onclick="copyEmail()">hello@carlossucre.dev</span>
+    </div>
+
+    <footer>
+      <p>© 2025 Carlos Sucre — Brazil — Building software that matters.</p>
+    </footer>
+
+  </div>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <div class="page" id="projects">
+
+    <div class="page-header">
+      <h2>Projects</h2>
+      <p>Things I built, shipped, and open-sourced.</p>
+    </div>
+
+    <section class="section">
+      <p class="section-title">Web Applications</p>
+      <ul class="project-list">
+        <li>
+          <div>
+            <a href="#">SaaS Starter Boilerplate</a>
+            <p class="project-desc">Production-ready fullstack boilerplate to launch SaaS products fast. Built with Next.js, PostgreSQL and Stripe. Includes auth, billing and dashboard.</p>
+          </div>
+          <span class="project-tag">Next.js</span>
+        </li>
+        <li>
+          <div>
+            <a href="#">LinkQueue</a>
+            <p class="project-desc">A minimalist read-later app that respects your time. Save links, get AI-powered summaries, and stay focused without distractions.</p>
+          </div>
+          <span class="project-tag">Web App</span>
+        </li>
+        <li>
+          <div>
+            <a href="#">FormForge</a>
+            <p class="project-desc">A no-code form builder with custom logic, webhooks, and analytics. Designed for small businesses that need forms without the bloat.</p>
+          </div>
+          <span class="project-tag">SaaS</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <p class="section-title">Open Source & Tools</p>
+      <ul class="project-list">
+        <li>
+          <div>
+            <a href="#">Dev Tools CLI</a>
+            <p class="project-desc">A command-line toolkit automating repetitive dev tasks — project scaffolding, environment setup, deploys, and more.</p>
+          </div>
+          <span class="project-tag">CLI / Node.js</span>
+        </li>
+        <li>
+          <div>
+            <a href="#">API Mock Server</a>
+            <p class="project-desc">Lightweight local mock server for frontend devs. Define routes in a JSON file and get a running REST API in seconds.</p>
+          </div>
+          <span class="project-tag">Open Source</span>
+        </li>
+        <li>
+          <div>
+            <a href="#">React Component Kit</a>
+            <p class="project-desc">A collection of unstyled, accessible React components focused on behavior over appearance. Bring your own styles.</p>
+          </div>
+          <span class="project-tag">React</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <p class="section-title">Automations & Scripts</p>
+      <ul class="project-list">
+        <li>
+          <div>
+            <a href="#">GitHub Activity Digest</a>
+            <p class="project-desc">A GitHub Action that sends a weekly summary of your open-source activity directly to your email or Slack.</p>
+          </div>
+          <span class="project-tag">GitHub Actions</span>
+        </li>
+        <li>
+          <div>
+            <a href="#">Content Publisher Bot</a>
+            <p class="project-desc">Automation that cross-posts content from a single source to Twitter, LinkedIn, and Telegram simultaneously.</p>
+          </div>
+          <span class="project-tag">Automation</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Carlos Sucre — Brazil — Building software that matters.</p>
+    </footer>
+
+  </div>
+
+  <!-- ===================== POSTS ===================== -->
+  <div class="page" id="posts">
+
+    <div class="page-header">
+      <h2>Posts</h2>
+      <p>Essays, thoughts, and things I've learned along the way.</p>
+    </div>
+
+    <section class="section">
+      <p class="section-title">2025</p>
+      <ul class="posts-list">
+        <li>
+          <div class="post-meta">
+            <a href="#">Why I build in public — and why you should too</a>
+            <span class="post-date">Jan 2025</span>
+          </div>
+          <p class="post-excerpt">Building in public is not just a marketing strategy. It's a commitment to learning faster, connecting with real people, and shipping things that matter.</p>
+        </li>
+        <li>
+          <div class="post-meta">
+            <a href="#">The Fullstack Developer Mindset</a>
+            <span class="post-date">Jan 2025</span>
+          </div>
+          <p class="post-excerpt">Being fullstack is not about knowing everything — it's about understanding the full picture and making smart tradeoffs at every layer of the stack.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <p class="section-title">2024</p>
+      <ul class="posts-list">
+        <li>
+          <div class="post-meta">
+            <a href="#">From Idea to Deploy: My Fullstack Workflow in 2025</a>
+            <span class="post-date">Dec 2024</span>
+          </div>
+          <p class="post-excerpt">A walkthrough of how I go from a blank screen to a deployed, working product — tools, decisions, and lessons learned from shipping real projects.</p>
+        </li>
+        <li>
+          <div class="post-meta">
+            <a href="#">What startups taught me about writing clean code</a>
+            <span class="post-date">Nov 2024</span>
+          </div>
+          <p class="post-excerpt">Speed matters, but messy code kills speed in the long run. Here's what I learned writing code under pressure in startup environments.</p>
+        </li>
+        <li>
+          <div class="post-meta">
+            <a href="#">Open Source is the best portfolio you can have</a>
+            <span class="post-date">Sep 2024</span>
+          </div>
+          <p class="post-excerpt">A GitHub profile full of real projects says more than any resume. Here's my take on why every developer should contribute to open source.</p>
+        </li>
+        <li>
+          <div class="post-meta">
+            <a href="#">Learning to say no to features</a>
+            <span class="post-date">Jul 2024</span>
+          </div>
+          <p class="post-excerpt">The best feature you can ship is sometimes the one you didn't build. A short essay on product discipline as a developer.</p>
+        </li>
+        <li>
+          <div class="post-meta">
+            <a href="#">Why I stopped chasing perfect and started shipping</a>
+            <span class="post-date">May 2024</span>
+          </div>
+          <p class="post-excerpt">Perfectionism is the enemy of progress. Here's how I broke the cycle and learned to ship early, iterate fast, and learn from real users.</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Carlos Sucre — Brazil — Building software that matters.</p>
+    </footer>
+
+  </div>
+
+  <!-- ===================== VIDEOS ===================== -->
+  <div class="page" id="videos">
+
+    <div class="page-header">
+      <h2>Videos</h2>
+      <p>Programming, fullstack development, and building real projects on YouTube.</p>
+    </div>
+
+    <section class="section">
+      <p class="section-title">YouTube Channel</p>
+      <div class="videos-placeholder">
+        <span class="play-icon">▶</span>
+        Videos coming soon.<br>
+        <a href="https://youtube.com/@carlossucre" target="_blank">Subscribe on YouTube</a> to get notified when I publish.
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-title">Topics I cover</p>
+      <ul class="project-list">
+        <li>
+          <div>
+            <a href="https://youtube.com/@carlossucre" target="_blank">Fullstack Development</a>
+            <p class="project-desc">Building complete web applications from scratch — frontend, backend, database, and deployment, step by step.</p>
+          </div>
+          <span class="project-tag">Series</span>
+        </li>
+        <li>
+          <div>
+            <a href="https://youtube.com/@carlossucre" target="_blank">Real Project Builds</a>
+            <p class="project-desc">Coding real projects live, explaining every decision along the way. No shortcuts, no magic — just real code.</p>
+          </div>
+          <span class="project-tag">Build Along</span>
+        </li>
+        <li>
+          <div>
+            <a href="https://youtube.com/@carlossucre" target="_blank">Developer Career & Tips</a>
+            <p class="project-desc">Lessons from working with startups, contributing to open source, and growing as a developer in Brazil and beyond.</p>
+          </div>
+          <span class="project-tag">Career</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Carlos Sucre — Brazil — Building software that matters.</p>
+    </footer>
+
+  </div>
+
+</div><!-- /container -->
+
+<script src="script.js"></script>
+</body>
+</html>
