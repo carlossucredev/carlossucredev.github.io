@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Carlos Sucre</title>
+  <script>
+    // GitHub Pages SPA routing:
+    // /posts        → /?route=posts
+    // /posts/slug   → /?route=posts&slug=slug
+    // /projects     → /?route=projects
+    var parts = window.location.pathname.replace(/^\//, '').split('/').filter(Boolean);
+    var base  = window.location.origin;
+    var query = '';
+    if (parts.length === 0) {
+      query = '/';
+    } else if (parts.length === 1) {
+      query = '/?route=' + encodeURIComponent(parts[0]);
+    } else {
+      query = '/?route=' + encodeURIComponent(parts[0]) + '&slug=' + encodeURIComponent(parts[1]);
+    }
+    window.location.replace(base + query);
+  </script>
+</head>
+<body></body>
+</html>
