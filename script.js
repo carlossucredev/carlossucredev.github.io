@@ -31,7 +31,7 @@ function navigateTo(target) {
 
 // ===== COPY EMAIL =====
 function copyEmail() {
-  const email = 'hello@carlossucre.dev';
+  const email = 'carlossucredev@gmail.com';
   navigator.clipboard.writeText(email).then(() => {
     const toast = document.getElementById('email-toast');
     toast.classList.add('show');
