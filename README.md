@@ -1,6 +1,6 @@
 # Carlos Sucre — Personal Portfolio
 
-Personal portfolio website built with plain HTML, CSS and JavaScript. No frameworks, no bundler, no build step.
+Personal portfolio website.
 
 Live at → **[carlossucredev.github.io](https://carlossucredev.github.io)**
 
