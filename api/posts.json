@@ -1,14 +1,1 @@
-[
-  {
-    "title": "Título do Post",
-    "slug": "titulo-do-post",
-    "date": "2026-02-28",
-    "summary": "Breve descrição.",
-    "tags": [
-      "tag1",
-      "tag2"
-    ],
-    "featured": false,
-    "content": "<p>This is the content of the post 01</p>"
-  }
-]
+[]
