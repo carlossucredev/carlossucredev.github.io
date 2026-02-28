@@ -1,12 +1,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0d1117;
-  --text: #dde1eb;
-  --muted: #7a8fa6;
-  --accent: #e8c547;
-  --border: #1e2a38;
-  --card-bg: #131c27;
+  /* Backgrounds — mais escuro para aumentar o contraste geral */
+  --bg:       #080d12;
+  --card-bg:  #0e1620;
+  --border:   #1f2e3d;
+
+  /* Texto — mais brilhante para contrastar com o fundo escuro */
+  --text:     #edf1f7;
+  --muted:    #8fa3b8;
+
+  /* Accent — amarelo mais saturado e vivo, igual ao segundo CSS */
+  --accent:   #f0c040;
 }
 
 html { font-size: 19px; scroll-behavior: smooth; }
@@ -26,7 +31,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(13,17,23,0.94);
+  background: rgba(8,13,18,0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   margin: 0 -1.5rem;
@@ -56,7 +61,11 @@ nav {
 }
 
 .nav-inner a:hover { color: var(--text); }
-.nav-inner a.active { color: var(--accent); background: rgba(232,197,71,0.07); }
+/* Active nav link: amarelo mais vivo, fundo mais visível */
+.nav-inner a.active {
+  color: var(--accent);
+  background: rgba(240,192,64,0.1);
+}
 
 /* ===== CONTAINER ===== */
 .container {
@@ -106,6 +115,7 @@ nav {
   height: 72px;
   border-radius: 50%;
   object-fit: cover;
+  /* Borda mais contrastante ao redor da foto */
   border: 2px solid var(--border);
   display: block;
 }
@@ -128,7 +138,6 @@ nav {
   left: 0;
 }
 
-/* show initials as fallback; onerror in HTML switches them */
 .profile-photo { display: block; }
 .profile-photo-initials { display: none; position: absolute; top: 0; left: 0; }
 
@@ -138,7 +147,8 @@ nav {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1.35rem;
   font-weight: 500;
-  color: #fff;
+  /* Branco puro para máximo contraste no nome */
+  color: #ffffff;
   letter-spacing: -0.02em;
   margin-bottom: 6px;
 }
@@ -150,6 +160,7 @@ nav {
   margin-bottom: 4px;
 }
 
+/* "Brazil" em accent para dar destaque */
 .header .role span { color: var(--accent); }
 
 .site-url {
@@ -168,6 +179,7 @@ nav {
 /* ===== BIO ===== */
 .bio {
   font-size: 0.97rem;
+  /* Texto principal mais claro */
   color: var(--text);
   margin-bottom: 36px;
   line-height: 1.9;
@@ -195,6 +207,7 @@ nav {
   font-size: 0.76rem;
   color: var(--muted);
   text-decoration: none;
+  /* Borda mais visível nos botões sociais */
   border: 1px solid var(--border);
   padding: 4px 12px;
   border-radius: 2px;
@@ -209,6 +222,7 @@ nav {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.7rem;
   font-weight: 500;
+  /* Muted ligeiramente mais claro para legibilidade */
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.13em;
@@ -226,13 +240,14 @@ nav {
 
 .testimonial-card {
   background: var(--card-bg);
+  /* Borda mais visível nos cards */
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 22px 20px;
   transition: border-color 0.2s;
 }
 
-.testimonial-card:hover { border-color: #333; }
+.testimonial-card:hover { border-color: #2e4057; }
 
 .testimonial-quote {
   font-size: 0.84rem;
@@ -240,9 +255,10 @@ nav {
   line-height: 1.75;
   margin-bottom: 18px;
   font-style: italic;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
+/* Aspas em accent para chamar atenção */
 .testimonial-quote::before { content: '"'; color: var(--accent); font-style: normal; font-size: 1.1rem; }
 .testimonial-quote::after  { content: '"'; color: var(--accent); font-style: normal; font-size: 1.1rem; }
 
@@ -255,7 +271,7 @@ nav {
 .testimonial-name {
   font-size: 0.83rem;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
 }
 
 .testimonial-role {
@@ -271,7 +287,7 @@ nav {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1.15rem;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
@@ -297,8 +313,9 @@ nav {
   gap: 12px;
 }
 
+/* Títulos dos projetos em branco para máximo contraste */
 .project-list a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 400;
@@ -308,6 +325,7 @@ nav {
 
 .project-desc {
   font-size: 0.84rem;
+  /* Muted um pouco mais claro para ser legível */
   color: var(--muted);
   line-height: 1.7;
 }
@@ -339,20 +357,19 @@ nav {
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
-.project-btn--repo {
-  color: var(--muted);
-}
+.project-btn--repo { color: var(--muted); }
 .project-btn--repo:hover {
   color: var(--text);
-  border-color: #444;
+  border-color: #2e4057;
 }
 
+/* Demo button em accent — chama mais atenção */
 .project-btn--demo {
   color: var(--accent);
-  border-color: rgba(232,197,71,0.3);
+  border-color: rgba(240,192,64,0.35);
 }
 .project-btn--demo:hover {
-  background: rgba(232,197,71,0.07);
+  background: rgba(240,192,64,0.08);
   border-color: var(--accent);
 }
 
@@ -366,6 +383,15 @@ nav {
 .posts-list li:first-child { padding-top: 0; }
 .posts-list li:last-child { border-bottom: none; }
 
+/* Container dinâmico de posts — sem estilo extra, herda da posts-list */
+.posts-dynamic-container .posts-loading,
+.posts-dynamic-container .posts-empty {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  padding: 32px 0;
+}
+
 .post-meta {
   display: flex;
   justify-content: space-between;
@@ -374,6 +400,7 @@ nav {
   margin-bottom: 6px;
 }
 
+/* Títulos dos posts levemente mais brilhantes */
 .posts-list a {
   color: var(--text);
   text-decoration: none;
@@ -404,7 +431,7 @@ nav {
   padding: 22px 20px;
   transition: border-color 0.2s;
 }
-.channel-card:hover { border-color: #333; }
+.channel-card:hover { border-color: #2e4057; }
 
 .channel-card-top {
   display: flex;
@@ -425,7 +452,7 @@ nav {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.88rem;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
@@ -440,37 +467,16 @@ nav {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.76rem;
   color: var(--accent);
-  border: 1px solid rgba(232,197,71,0.35);
+  border: 1px solid rgba(240,192,64,0.35);
   padding: 6px 14px;
   border-radius: 2px;
   text-decoration: none;
   transition: background 0.2s, border-color 0.2s;
 }
 .channel-btn:hover {
-  background: rgba(232,197,71,0.07);
+  background: rgba(240,192,64,0.08);
   border-color: var(--accent);
 }
-
-.videos-placeholder {
-  font-size: 0.86rem;
-  color: var(--muted);
-  font-family: 'IBM Plex Mono', monospace;
-  padding: 44px 24px;
-  text-align: center;
-  border: 1px dashed var(--border);
-  border-radius: 4px;
-  line-height: 2;
-}
-
-.videos-placeholder .play-icon {
-  display: block;
-  color: var(--accent);
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.videos-placeholder a { color: var(--accent); text-decoration: none; }
-.videos-placeholder a:hover { text-decoration: underline; }
 
 /* ===== ARTICLE VIEW ===== */
 .article-back {
@@ -502,7 +508,7 @@ nav {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1.25rem;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   line-height: 1.45;
   letter-spacing: -0.02em;
 }
@@ -514,18 +520,84 @@ nav {
   margin-bottom: 64px;
 }
 
-.article-body p {
-  margin-bottom: 22px;
-}
-
+.article-body p { margin-bottom: 22px; }
 .article-body p:last-child { margin-bottom: 0; }
 
-.article-body strong {
-  color: #fff;
+/* Headings dentro do artigo */
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4 {
+  font-family: 'IBM Plex Mono', monospace;
+  color: #ffffff;
   font-weight: 500;
+  margin: 36px 0 14px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+.article-body h1 { font-size: 1.15rem; }
+.article-body h2 { font-size: 1.0rem;  }
+.article-body h3 { font-size: 0.92rem; }
+
+/* Strong em branco para destacar */
+.article-body strong { color: #ffffff; font-weight: 500; }
+
+/* Links dentro do artigo em accent */
+.article-body a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240,192,64,0.3);
+  transition: border-color 0.2s;
+}
+.article-body a:hover { border-bottom-color: var(--accent); }
+
+/* Imagens dentro do artigo */
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 24px 0;
+  border: 1px solid var(--border);
 }
 
-/* ===== POSTS LIST — clickable cursor ===== */
+/* Código inline */
+.article-body code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85em;
+  background: rgba(240,192,64,0.08);
+  border: 1px solid rgba(240,192,64,0.15);
+  color: var(--accent);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+/* Blocos de código */
+.article-body pre {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 18px 20px;
+  overflow-x: auto;
+  margin: 24px 0;
+}
+
+.article-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--text);
+  font-size: 0.83rem;
+}
+
+/* Listas dentro do artigo */
+.article-body ul,
+.article-body ol {
+  padding-left: 22px;
+  margin-bottom: 22px;
+}
+.article-body li { margin-bottom: 6px; }
+
+/* ===== POSTS LIST — cursor pointer ===== */
 .posts-list a[data-slug] { cursor: pointer; }
 
 /* ===== FOOTER ===== */
@@ -549,7 +621,7 @@ footer {
 .contact-btn:hover {
   color: var(--accent) !important;
   border-color: var(--accent) !important;
-  background: rgba(232,197,71,0.07) !important;
+  background: rgba(240,192,64,0.07) !important;
 }
 
 /* ===== EMAIL TOAST ===== */
@@ -558,7 +630,7 @@ footer {
   top: 54px;
   left: 50%;
   transform: translateX(-50%) translateY(-6px);
-  background: #1a1a1a;
+  background: var(--card-bg);
   border: 1px solid var(--border);
   color: var(--accent);
   font-family: 'IBM Plex Mono', monospace;
